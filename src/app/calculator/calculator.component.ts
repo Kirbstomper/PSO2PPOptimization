@@ -20,7 +20,7 @@ export class CalculatorComponent implements OnInit {
   bullet = '';
   skillCost = '';
 
-  output = 0;
+  output = '';
   constructor() { }
 
   getTotalPP(): number {
@@ -36,11 +36,23 @@ export class CalculatorComponent implements OnInit {
             Number(this.subclass_2);
   }
 
-  caclulate(): void {
+
+  calulateTotalUses(): number {
+    return Math.floor(this.getTotalPP() / Number(this.skillCost));
+  }
+
+  calculateNeeded(): number {
+    return Number(this.skillCost) - (this.getTotalPP() % Number(this.skillCost));
+  }
+  update(): void {
     console.log('Hello, you clicked me');
     console.log(this.getTotalPP());
-    this.output = this.getTotalPP();
+    this.output = 'Your Total PP is:' + this.getTotalPP().toString() + '\n' +
+                  'Number of uses is:' + this.calulateTotalUses().toString() + '\n' +
+                  'Needed to use again is:' + this.calculateNeeded().toString();
+
   }
+
   ngOnInit(): void {
   }
 

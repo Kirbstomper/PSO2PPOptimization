@@ -22,4 +22,25 @@ describe('CalculatorComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should calculate total PP correctly', () => {
+    component.base = '4';
+    component.unit_1 = '2';
+    component.unit_2 = '3';
+    component.unit_3 = '1';
+    expect(component.getTotalPP()).toEqual(10);
+  });
+
+  it('should calculate total uses correctly', () => {
+    component.base = '5';
+    component.skillCost = '2';
+    expect(component.calulateTotalUses()).toEqual(2);
+  });
+
+  it('should calculate amount needed correctly', () => {
+    component.base = '5';
+    component.skillCost = '2';
+    expect(component.calculateNeeded()).toEqual(1);
+  });
+
 });
