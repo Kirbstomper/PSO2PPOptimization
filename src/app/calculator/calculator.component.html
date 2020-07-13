@@ -1,19 +1,42 @@
 <p>Astra PP Optimization Calculator</p>
 
 
-<input type="text" id="base" name="base"><br><br>
-<input type="text" id="weapon" name="weapon"><br><br>
-<input type="text" id="unit_1" name="unit_1"><br><br>
-<input type="text" id="unit_2" name="unit_2"><br><br>
-<input type="text" id="unit_3" name="unit_3"><br><br>
-<input type="text" id="mainclass_1" name="mainclass_1"><br><br>
-<input type="text" id="mainclass_2" name="mainclass_2"><br><br>
-<input type="text" id="subclass_1" name="subclass_1"><br><br>
-<input type="text" id="subclass_2" name="subclass_2"><br><br>
-<input type="text" id="territory" name="territory"><br><br>
-<input type="text" id="bullet" name="bullet"><br><br>
+<label for="base">Base:</label>
+<input type="text" id="base" name="base" [(ngModel)]="base"><br><br>
 
-<input type="text" id="ppCost" name="ppCost"><br><br>
-<input type="button" id="submit" name="submit"><br><br>
+<label for="weapon">Weapon:</label>
+<input type="text" id="weapon" name="weapon" [(ngModel)]="weapon"><br><br>
 
-<textarea>THIS IS WHERE CALCULATED RESULTS WILL GO</textarea>
+<label for="unit_1">Unit 1:</label>
+<input type="text" id="unit_1" name="unit_1" [(ngModel)]="unit_1"><br><br>
+
+<label for="unit_2">Unit 2:</label>
+<input type="text" id="unit_2" name="unit_2" [(ngModel)]="unit_2"><br><br>
+
+<label for="unit_3">Unit 3:</label>
+<input type="text" id="unit_3" name="unit_3" [(ngModel)]="unit_3"><br><br>
+
+<label for="mainclass_1">Mainclass 1:</label>
+<input type="text" id="mainclass_1" name="mainclass_1" [(ngModel)]="mainclass_1"><br><br>
+
+<label for="mainclass_2">Mainclass 2:</label>
+<input type="text" id="mainclass_2" name="mainclass_2" [(ngModel)]="mainclass_2"><br><br>
+
+<label for="subclass_1">Subclass 1:</label>
+<input type="text" id="subclass_1" name="subclass_1" [(ngModel)]="subclass_1"><br><br>
+
+<label for="subclass_2">Subclass 2:</label>
+<input type="text" id="subclass_2" name="subclass_2" [(ngModel)]="subclass_2"><br><br>
+
+<label for="territory">Territory Save Level:</label>
+<input type="text" id="territory" name="territory" [(ngModel)]="territory"><br><br>
+
+<label for="bullet">Conservation Bullet Level:</label>
+<input type="text" id="bullet" name="bullet" [(ngModel)]="bullet"><br><br>
+
+<label for="skillCost">Skill Cost:</label>
+<input type="text" id="skillCost" name="skillCost" [(ngModel)]="skillCost"><br><br>
+
+<button (click)="caclulate()">Calculate</button><br><br>
+
+<textarea [(ngModel)]="output"></textarea>
