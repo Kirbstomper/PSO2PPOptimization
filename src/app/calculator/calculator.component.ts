@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { $ } from 'protractor';
 
 @Component({
   selector: 'app-calculator',
@@ -50,7 +51,7 @@ export class CalculatorComponent implements OnInit {
     this.output = 'Your Total PP is:' + this.getTotalPP().toString() + '\n' +
                   'Number of uses is:' + this.calulateTotalUses().toString() + '\n' +
                   'Needed to use again is:' + this.calculateNeeded().toString();
-
+                  
   }
 
   ngOnInit(): void {

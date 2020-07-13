@@ -1,42 +1,88 @@
-<p>Astra's Phantasy Star Online 2 PP Optimization Calculator</p>
+<div class="container">
+    <h1>Astra's Phantasy Star Online 2 PP Optimization Calculator</h1>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Base</span>
+        </div>
+        <input type="text" id="base" name="base" [(ngModel)]="base">
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Weapon</span>
+        </div>
+        <input type="text" id="weapon" name="weapon" [(ngModel)]="weapon">
+    </div>
 
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Unit 1</span>
+        </div>
+        <input type="text" id="unit_1" name="unit_1" [(ngModel)]="unit_1">
+    </div>
 
-<label for="base">Base:</label>
-<input type="text" id="base" name="base" [(ngModel)]="base"><br><br>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Unit 2</span>
+        </div>
+        <input type="text" id="unit_2" name="unit_2" [(ngModel)]="unit_2">
+    </div>
 
-<label for="weapon">Weapon:</label>
-<input type="text" id="weapon" name="weapon" [(ngModel)]="weapon"><br><br>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Unit 3</span>
+        </div>
+        <input type="text" id="unit_3" name="unit_3" [(ngModel)]="unit_3">
+    </div>
 
-<label for="unit_1">Unit 1:</label>
-<input type="text" id="unit_1" name="unit_1" [(ngModel)]="unit_1"><br><br>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Mainclass 1</span>
+        </div>
+        <input type="text" id="mainclass_1" name="mainclass_1" [(ngModel)]="mainclass_1">
+    </div>
 
-<label for="unit_2">Unit 2:</label>
-<input type="text" id="unit_2" name="unit_2" [(ngModel)]="unit_2"><br><br>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Mainclass 2</span>
+        </div>
+        <input type="text" id="mainclass_2" name="mainclass_2" [(ngModel)]="mainclass_2">
+    </div>
 
-<label for="unit_3">Unit 3:</label>
-<input type="text" id="unit_3" name="unit_3" [(ngModel)]="unit_3"><br><br>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Subclass 1</span>
+        </div>
+        <input type="text" id="subclass_1" name="subclass_1" [(ngModel)]="subclass_1">
+    </div>
 
-<label for="mainclass_1">Mainclass 1:</label>
-<input type="text" id="mainclass_1" name="mainclass_1" [(ngModel)]="mainclass_1"><br><br>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Subclass 2</span>
+        </div>
+        <input type="text" id="subclass_2" name="subclass_2" [(ngModel)]="subclass_2">
+    </div>
 
-<label for="mainclass_2">Mainclass 2:</label>
-<input type="text" id="mainclass_2" name="mainclass_2" [(ngModel)]="mainclass_2"><br><br>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Territory Save Level</span>
+        </div>
+        <input type="text" id="territory" name="territory" [(ngModel)]="territory">
+    </div>
 
-<label for="subclass_1">Subclass 1:</label>
-<input type="text" id="subclass_1" name="subclass_1" [(ngModel)]="subclass_1"><br><br>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Conservation Bullet Level</span>
+        </div>
+        <input type="text" id="bullet" name="bullet" [(ngModel)]="bullet">
+    </div>
 
-<label for="subclass_2">Subclass 2:</label>
-<input type="text" id="subclass_2" name="subclass_2" [(ngModel)]="subclass_2"><br><br>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Skill Cost</span>
+        </div>
+        <input type="text" id="skillCost" name="skillCost" [(ngModel)]="skillCost">
+    </div>
+    <button class="btn btn-primary btn-lg btn-block" (click)="update()">Calculate</button>
 
-<label for="territory">Territory Save Level:</label>
-<input type="text" id="territory" name="territory" [(ngModel)]="territory"><br><br>
-
-<label for="bullet">Conservation Bullet Level:</label>
-<input type="text" id="bullet" name="bullet" [(ngModel)]="bullet"><br><br>
-
-<label for="skillCost">Skill Cost:</label>
-<input type="text" id="skillCost" name="skillCost" [(ngModel)]="skillCost"><br><br>
-
-<button (click)="update()">Calculate</button><br><br>
-
-<textarea [(ngModel)]="output"></textarea>
+    <textarea class="text" [(ngModel)]="output"></textarea>
+</div>
